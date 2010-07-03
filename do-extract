@@ -8,7 +8,7 @@ BOOST_ROOT="$1"
 rm -Rf "$SUBSET_ROOT"
 mkdir "$SUBSET_ROOT"
 bcp --boost="$BOOST_ROOT" python thread "$SUBSET_ROOT"
-rm -Rf "$SUBSET_ROOT"/{boost,libs}/(*~python~config~mpl~smart_ptr~detail~utility~preprocessor~type_traits~exception~function~bind~iterator~range~tuple~thread~graph~pending~*hpp)
+rm -Rf "$SUBSET_ROOT"/{boost,libs}/(*~python~config~mpl~smart_ptr~detail~utility~preprocessor~type_traits~exception~function~bind~iterator~range~tuple~thread~graph~pending~numeric~*hpp)
 rm -Rf "$SUBSET_ROOT"/doc
 rm -Rf "$SUBSET_ROOT"/boost/mpl/aux_/preprocessed/(*~gcc~typeof_based)
 rm -Rf "$SUBSET_ROOT"/boost/mpl/vector/aux_/preprocessed/(*~gcc~typeof_based)
