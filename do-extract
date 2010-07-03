@@ -8,17 +8,16 @@ BOOST_ROOT="$1"
 rm -Rf "$SUBSET_ROOT"
 mkdir "$SUBSET_ROOT"
 bcp --boost="$BOOST_ROOT" python thread "$SUBSET_ROOT"
-rm -Rf "$SUBSET_ROOT"/{boost,libs}/(*~python~config~mpl~smart_ptr~detail~utility~preprocessor~type_traits~exception~function~bind~iterator~range~tuple~thread~graph~pending~numeric~*hpp)
+rm -Rf "$SUBSET_ROOT"/boost/(*~python~config~mpl~smart_ptr~detail~utility~preprocessor~type_traits~exception~function~bind~iterator~range~tuple~thread~graph~pending~numeric~property_map~concept~parameter~optional~multi_index~unordered~functional~integer~date_time~*hpp)
+rm -Rf "$SUBSET_ROOT"/libs/(*~python~smart_ptr~thread)
 rm -Rf "$SUBSET_ROOT"/doc
 rm -Rf "$SUBSET_ROOT"/boost/mpl/aux_/preprocessed/(*~gcc~typeof_based)
 rm -Rf "$SUBSET_ROOT"/boost/mpl/vector/aux_/preprocessed/(*~gcc~typeof_based)
-rm -Rf "$SUBSET_ROOT"/boost/concept*hpp
 rm -Rf "$SUBSET_ROOT"/libs/python/{doc,example,pyste}
 find "$SUBSET_ROOT" -name 'Jam*' -delete
 rm -Rf "$SUBSET_ROOT"/**/build
 rm -Rf "$SUBSET_ROOT"/libs/*/example
 rm -Rf "$SUBSET_ROOT"/libs/*/doc
-rm -Rf "$SUBSET_ROOT"/libs/detail
 rm -Rf "$SUBSET_ROOT"/libs/*/tutorial
 rm -Rf "$SUBSET_ROOT"/**/test
 rm -Rf "$SUBSET_ROOT"/**/edg
