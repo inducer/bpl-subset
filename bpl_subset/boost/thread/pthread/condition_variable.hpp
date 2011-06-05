@@ -51,7 +51,7 @@ namespace boost
         detail::interruption_checker check_for_interruption(&internal_mutex,&cond);
         guard.activate(m);
         int const res=pthread_cond_wait(&cond,&internal_mutex);
-        BOOST_ASSERT(!res);
+        BOOST_VERIFY(!res);
         this_thread::interruption_point();
     }
 
