@@ -10,7 +10,6 @@ mkdir "$SUBSET_ROOT"
 bcp --boost="$BOOST_ROOT" python thread format ptr_container "$SUBSET_ROOT"
 mkdir -p "$SUBSET_ROOT/boost/ptr_container"
 cp -R $BOOST_ROOT/boost/ptr_container/* "$SUBSET_ROOT/boost/ptr_container"
-cp -R $BOOST_ROOT/libs/python/test/module_tail.cpp* "$SUBSET_ROOT/libs/python/src"
 for z in "$SUBSET_ROOT"/boost/(*~python~config~mpl~smart_ptr~detail~utility~preprocessor~type_traits~exception~function~bind~iterator~range~tuple~thread~graph~pending~numeric~date_time~property_map~concept~parameter~optional~multi_index~unordered~functional~integer~ptr_container~format~typeof~*hpp); do 
   echo "DELETING $z"
   rm -Rf $z
@@ -28,6 +27,7 @@ rm -Rf "$SUBSET_ROOT"/libs/*/doc
 rm -Rf "$SUBSET_ROOT"/libs/*/tutorial
 rm -Rf "$SUBSET_ROOT"/**/test
 rm -Rf "$SUBSET_ROOT"/**/edg
+rm -Rf "$SUBSET_ROOT"/libs/python/class.cpp # what the hell is that doing there?
 rm "$SUBSET_ROOT"/*.{css,png}
 
 du -sh "$SUBSET_ROOT"
