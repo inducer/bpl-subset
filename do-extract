@@ -19,6 +19,8 @@ for z in "$SUBSET_ROOT"/boost/(*~move~python~config~mpl~smart_ptr~detail~utility
   echo "DELETING $z"
   rm -Rf $z
 done
+cp $BOOST_ROOT/boost/typeof/incr_registration_group.hpp \
+  "$SUBSET_ROOT/boost/typeof/"
 
 rm -Rf "$SUBSET_ROOT"/libs/(*~python~smart_ptr~thread)
 rm -Rf "$SUBSET_ROOT"/doc
