@@ -21,6 +21,7 @@ for z in "$SUBSET_ROOT"/boost/(*~move~python~config~mpl~smart_ptr~detail~utility
 done
 cp $BOOST_ROOT/boost/typeof/incr_registration_group.hpp \
   "$SUBSET_ROOT/boost/typeof/"
+cp -Rv $BOOST_ROOT/boost/preprocessor/slot "$SUBSET_ROOT/boost/preprocessor"
 
 rm -Rf "$SUBSET_ROOT"/libs/(*~python~smart_ptr~thread)
 rm -Rf "$SUBSET_ROOT"/doc
