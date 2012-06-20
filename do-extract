@@ -15,7 +15,7 @@ cp -R $BOOST_ROOT/boost/ptr_container/* "$SUBSET_ROOT/boost/ptr_container"
 for comp in control list repetition; do
   cp -R $BOOST_ROOT/boost/preprocessor/$comp/detail/edg "$SUBSET_ROOT/boost/preprocessor/$comp/detail"
 done
-for z in "$SUBSET_ROOT"/boost/(*~move~python~config~mpl~smart_ptr~detail~utility~preprocessor~type_traits~exception~function~math~bind~iterator~range~tuple~thread~graph~pending~numeric~date_time~property_map~concept~parameter~optional~multi_index~unordered~functional~integer~ptr_container~container~format~typeof~*hpp); do 
+for z in "$SUBSET_ROOT"/boost/(*~move~python~config~mpl~smart_ptr~detail~utility~preprocessor~type_traits~exception~function~math~bind~iterator~range~tuple~thread~graph~pending~numeric~date_time~property_map~concept~parameter~optional~multi_index~unordered~functional~integer~ptr_container~container~format~io~typeof~*hpp); do 
   echo "DELETING $z"
   rm -Rf $z
 done
