@@ -23,7 +23,7 @@ cp $BOOST_ROOT/boost/typeof/incr_registration_group.hpp \
   "$SUBSET_ROOT/boost/typeof/"
 cp -Rv $BOOST_ROOT/boost/preprocessor/slot "$SUBSET_ROOT/boost/preprocessor"
 
-rm -Rf "$SUBSET_ROOT"/libs/(*~python~smart_ptr~thread)
+rm -Rf "$SUBSET_ROOT"/libs/(*~python~smart_ptr~thread~system)
 rm -Rf "$SUBSET_ROOT"/doc
 rm -Rf "$SUBSET_ROOT"/boost/typeof/vector{100,150,200}.hpp
 rm -Rf "$SUBSET_ROOT"/boost/mpl/aux_/preprocessed/(*~gcc~typeof_based~plain)
