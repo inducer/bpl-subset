@@ -59,7 +59,7 @@ extern "C"
 #if PY_VERSION_HEX >= 0x03000000
                 PyUnicode_FromFormat("%S.%s.%S", mod, self_->ob_type->tp_name, name);
 #else
-                PyString_FromFormat("%s.%s.%s", 
+                PyString_FromFormat("%s.%s.%s",
                         PyString_AsString(mod), self_->ob_type->tp_name, PyString_AsString(name));
 #endif
         }
@@ -107,7 +107,6 @@ static PyTypeObject enum_type_object = {
 #if PY_VERSION_HEX < 0x03000000
     | Py_TPFLAGS_CHECKTYPES
 #endif
-    | Py_TPFLAGS_HAVE_GC
     | Py_TPFLAGS_BASETYPE,                  /* tp_flags */
     0,                                      /* tp_doc */
     0,                                      /* tp_traverse */
