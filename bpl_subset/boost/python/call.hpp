@@ -60,7 +60,7 @@ call(PyObject* callable
     )
 {
     PyObject* const result = 
-        PyEval_CallFunction(
+        PyObject_CallFunction(
             callable
             , const_cast<char*>("(" BOOST_PP_REPEAT_1ST(N, BOOST_PYTHON_FIXED, "O") ")")
             BOOST_PP_REPEAT_1ST(N, BOOST_PYTHON_FAST_ARG_TO_PYTHON_GET, nil)
